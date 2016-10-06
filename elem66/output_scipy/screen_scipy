@@ -1,0 +1,264 @@
+No Jacobian form specified for nonlinear variational problem.
+Differentiating residual form F to obtain Jacobian J = F'.
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 4.641e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 7.593e-17 (tol = 1.000e-10) r (rel) = 1.636e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** -------------------------------------------------------------------------
+*** Warning: Function copy constructor has been deprecated in FEniCS version 2016.1.
+*** It will (likely) be removed in the next FEniCS release.
+*** Use 'Function.copy(deepcopy=True)' for copying.
+*** -------------------------------------------------------------------------
+
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 4.641e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 7.593e-17 (tol = 1.000e-10) r (rel) = 1.636e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** Warning: Warning: got zero RHS for the solve associated with variable f_75:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** Warning: Warning: got zero RHS for the solve associated with variable f_60:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** -------------------------------------------------------------------------
+*** Warning: Function copy constructor has been deprecated in FEniCS version 2016.1.
+*** It will (likely) be removed in the next FEniCS release.
+*** Use 'Function.copy(deepcopy=True)' for copying.
+*** -------------------------------------------------------------------------
+
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 4.641e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 6.438e-17 (tol = 1.000e-10) r (rel) = 1.387e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** Warning: Warning: got zero RHS for the solve associated with variable f_75:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** Warning: Warning: got zero RHS for the solve associated with variable f_60:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** -------------------------------------------------------------------------
+*** Warning: Function copy constructor has been deprecated in FEniCS version 2016.1.
+*** It will (likely) be removed in the next FEniCS release.
+*** Use 'Function.copy(deepcopy=True)' for copying.
+*** -------------------------------------------------------------------------
+
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 3.781e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 6.354e-17 (tol = 1.000e-10) r (rel) = 1.680e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** Warning: Warning: got zero RHS for the solve associated with variable f_75:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** Warning: Warning: got zero RHS for the solve associated with variable f_60:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** -------------------------------------------------------------------------
+*** Warning: Function copy constructor has been deprecated in FEniCS version 2016.1.
+*** It will (likely) be removed in the next FEniCS release.
+*** Use 'Function.copy(deepcopy=True)' for copying.
+*** -------------------------------------------------------------------------
+
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 3.630e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 7.986e-17 (tol = 1.000e-10) r (rel) = 2.200e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** Warning: Warning: got zero RHS for the solve associated with variable f_75:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** Warning: Warning: got zero RHS for the solve associated with variable f_60:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** -------------------------------------------------------------------------
+*** Warning: Function copy constructor has been deprecated in FEniCS version 2016.1.
+*** It will (likely) be removed in the next FEniCS release.
+*** Use 'Function.copy(deepcopy=True)' for copying.
+*** -------------------------------------------------------------------------
+
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 3.669e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 6.543e-17 (tol = 1.000e-10) r (rel) = 1.783e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** Warning: Warning: got zero RHS for the solve associated with variable f_75:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** Warning: Warning: got zero RHS for the solve associated with variable f_60:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** -------------------------------------------------------------------------
+*** Warning: Function copy constructor has been deprecated in FEniCS version 2016.1.
+*** It will (likely) be removed in the next FEniCS release.
+*** Use 'Function.copy(deepcopy=True)' for copying.
+*** -------------------------------------------------------------------------
+
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 3.802e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 6.925e-17 (tol = 1.000e-10) r (rel) = 1.821e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** Warning: Warning: got zero RHS for the solve associated with variable f_75:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** Warning: Warning: got zero RHS for the solve associated with variable f_60:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** -------------------------------------------------------------------------
+*** Warning: Function copy constructor has been deprecated in FEniCS version 2016.1.
+*** It will (likely) be removed in the next FEniCS release.
+*** Use 'Function.copy(deepcopy=True)' for copying.
+*** -------------------------------------------------------------------------
+
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 3.910e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 6.870e-17 (tol = 1.000e-10) r (rel) = 1.757e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** Warning: Warning: got zero RHS for the solve associated with variable f_75:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** Warning: Warning: got zero RHS for the solve associated with variable f_60:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** -------------------------------------------------------------------------
+*** Warning: Function copy constructor has been deprecated in FEniCS version 2016.1.
+*** It will (likely) be removed in the next FEniCS release.
+*** Use 'Function.copy(deepcopy=True)' for copying.
+*** -------------------------------------------------------------------------
+
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 4.041e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 6.424e-17 (tol = 1.000e-10) r (rel) = 1.590e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** Warning: Warning: got zero RHS for the solve associated with variable f_75:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** Warning: Warning: got zero RHS for the solve associated with variable f_60:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** -------------------------------------------------------------------------
+*** Warning: Function copy constructor has been deprecated in FEniCS version 2016.1.
+*** It will (likely) be removed in the next FEniCS release.
+*** Use 'Function.copy(deepcopy=True)' for copying.
+*** -------------------------------------------------------------------------
+
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 4.082e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 7.089e-17 (tol = 1.000e-10) r (rel) = 1.737e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** Warning: Warning: got zero RHS for the solve associated with variable f_75:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** Warning: Warning: got zero RHS for the solve associated with variable f_60:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** -------------------------------------------------------------------------
+*** Warning: Function copy constructor has been deprecated in FEniCS version 2016.1.
+*** It will (likely) be removed in the next FEniCS release.
+*** Use 'Function.copy(deepcopy=True)' for copying.
+*** -------------------------------------------------------------------------
+
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 4.063e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 6.787e-17 (tol = 1.000e-10) r (rel) = 1.670e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** Warning: Warning: got zero RHS for the solve associated with variable f_75:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** Warning: Warning: got zero RHS for the solve associated with variable f_60:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** -------------------------------------------------------------------------
+*** Warning: Function copy constructor has been deprecated in FEniCS version 2016.1.
+*** It will (likely) be removed in the next FEniCS release.
+*** Use 'Function.copy(deepcopy=True)' for copying.
+*** -------------------------------------------------------------------------
+
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 4.039e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 6.247e-17 (tol = 1.000e-10) r (rel) = 1.547e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** Warning: Warning: got zero RHS for the solve associated with variable f_75:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** Warning: Warning: got zero RHS for the solve associated with variable f_60:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** -------------------------------------------------------------------------
+*** Warning: Function copy constructor has been deprecated in FEniCS version 2016.1.
+*** It will (likely) be removed in the next FEniCS release.
+*** Use 'Function.copy(deepcopy=True)' for copying.
+*** -------------------------------------------------------------------------
+
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 4.043e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 7.277e-17 (tol = 1.000e-10) r (rel) = 1.800e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** Warning: Warning: got zero RHS for the solve associated with variable f_75:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** Warning: Warning: got zero RHS for the solve associated with variable f_60:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** -------------------------------------------------------------------------
+*** Warning: Function copy constructor has been deprecated in FEniCS version 2016.1.
+*** It will (likely) be removed in the next FEniCS release.
+*** Use 'Function.copy(deepcopy=True)' for copying.
+*** -------------------------------------------------------------------------
+
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 4.061e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 8.384e-17 (tol = 1.000e-10) r (rel) = 2.064e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** Warning: Warning: got zero RHS for the solve associated with variable f_75:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** Warning: Warning: got zero RHS for the solve associated with variable f_60:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** -------------------------------------------------------------------------
+*** Warning: Function copy constructor has been deprecated in FEniCS version 2016.1.
+*** It will (likely) be removed in the next FEniCS release.
+*** Use 'Function.copy(deepcopy=True)' for copying.
+*** -------------------------------------------------------------------------
+
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 4.081e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 6.929e-17 (tol = 1.000e-10) r (rel) = 1.698e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** Warning: Warning: got zero RHS for the solve associated with variable f_75:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** Warning: Warning: got zero RHS for the solve associated with variable f_60:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** -------------------------------------------------------------------------
+*** Warning: Function copy constructor has been deprecated in FEniCS version 2016.1.
+*** It will (likely) be removed in the next FEniCS release.
+*** Use 'Function.copy(deepcopy=True)' for copying.
+*** -------------------------------------------------------------------------
+
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 4.082e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 5.633e-17 (tol = 1.000e-10) r (rel) = 1.380e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** Warning: Warning: got zero RHS for the solve associated with variable f_75:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** Warning: Warning: got zero RHS for the solve associated with variable f_60:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** -------------------------------------------------------------------------
+*** Warning: Function copy constructor has been deprecated in FEniCS version 2016.1.
+*** It will (likely) be removed in the next FEniCS release.
+*** Use 'Function.copy(deepcopy=True)' for copying.
+*** -------------------------------------------------------------------------
+
+Solving nonlinear variational problem.
+  Newton iteration 0: r (abs) = 4.079e-02 (tol = 1.000e-10) r (rel) = 1.000e+00 (tol = 1.000e-09)
+  Newton iteration 1: r (abs) = 6.104e-17 (tol = 1.000e-10) r (rel) = 1.496e-15 (tol = 1.000e-09)
+  Newton solver finished in 1 iterations and 1 linear solver iterations.
+*** Warning: Warning: got zero RHS for the solve associated with variable f_75:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+*** Warning: Warning: got zero RHS for the solve associated with variable f_60:0:0:Adjoint[Functional:1d97dbcf6ba5ba46871e08fda937f13c]
+Object cannot be plotted directly, projecting to piecewise linears.
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =           72     M =           10
+
+At X0        72 variables are exactly at the bounds
+
+At iterate    0    f=  9.17914D-05    |proj g|=  4.06966D-05
+
+At iterate    1    f=  9.17842D-05    |proj g|=  4.06930D-05
+
+At iterate    2    f=  3.59900D-05    |proj g|=  9.57237D-06
+
+At iterate    3    f=  2.91241D-05    |proj g|=  3.06628D-06
+
+At iterate    4    f=  2.75149D-05    |proj g|=  1.43848D-06
+
+At iterate    5    f=  2.71272D-05    |proj g|=  1.41468D-06
+
+At iterate    6    f=  2.68595D-05    |proj g|=  9.41376D-07
+
+At iterate    7    f=  2.66640D-05    |proj g|=  1.10193D-06
+
+At iterate    8    f=  2.65658D-05    |proj g|=  8.38809D-07
+
+At iterate    9    f=  2.65160D-05    |proj g|=  6.10105D-07
+
+At iterate   10    f=  2.64485D-05    |proj g|=  4.79311D-07
+
+At iterate   11    f=  2.64126D-05    |proj g|=  4.34531D-07
+
+At iterate   12    f=  2.63832D-05    |proj g|=  2.82024D-07
+
+At iterate   13    f=  2.63714D-05    |proj g|=  2.27789D-07
+
+At iterate   14    f=  2.63661D-05    |proj g|=  1.01166D-07
+
+At iterate   15    f=  2.63646D-05    |proj g|=  5.30540D-08
+
+           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+   72     15     16     18     0    17   5.305D-08   2.636D-05
+  F =   2.6364571536223134E-005
+
+CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+
+ Cauchy                time 0.000E+00 seconds.
+ Subspace minimization time 0.000E+00 seconds.
+ Line search           time 0.000E+00 seconds.
+
+ Total User time 0.000E+00 seconds.
+
