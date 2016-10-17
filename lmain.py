@@ -18,16 +18,9 @@ lam = Constant(2.0)
 g_np = np.loadtxt("measuredDisp_1col.txt")
 g = Function(V)
 g.vector().set_local( g_np )
-'''
-# impose bc work around
-#g.vector().set_local( np.append(g_np[:,0], g_np[:,1])  )
-
-F = inner(mu/2 * (grad(v)+grad(v).T), grad(u+g)+grad(u+g).T)*dx + lam*inner(div(v),div(u+g))*dx 
-
-bc = DirichletBC(V, (0.0,0.0), "on_boundary")
-'''
 
 '''
+# impose boundary conditions point by point
 F = inner(mu/2 * (grad(v)+grad(v).T), grad(u)+grad(u).T)*dx + lam*inner(div(v),div(u))*dx 
 class PinPoint(SubDomain):
     def __init__(self,p):
@@ -67,9 +60,7 @@ def forward(mu):
   F = inner(mu/2 * (grad(v)+grad(v).T), grad(u+g)+grad(u+g).T)*dx + lam*inner(div(v),div(u+g))*dx 
   bc = []
   bc_0 = DirichletBC(V.sub(0), Constant(0.0), "on_boundary")
-#  bc_0 = DirichletBC(V.sub(0), Constant(0.0), PinPoint([0.49, 0.0]), "pointwise")
   bc.append(bc_0)
-#  bc_1 = DirichletBC(V.sub(1), Constant(0.0), TopBot())
   bc_1 = DirichletBC(V.sub(1), Constant(0.0), "on_boundary")
   bc.append(bc_1)
   solve(F == 0, u,  bc)
@@ -78,13 +69,13 @@ u = forward(mu)
 
 
 
-File("output/g.pvd") << g
+#File("output/g.pvd") << g
 
-u_1 = project(u, V)
-File("output/u_1.pvd") << u_1
+#u_1 = project(u, V)
+#File("output/u_1.pvd") << u_1
 
-u_sol_1 = project(u+g, V)
-File("output/u_sol_1.pvd") << u_sol_1
+#u_sol_1 = project(u+g, V)
+#File("output/u_sol_1.pvd") << u_sol_1
 
 # create measured disp
 '''
@@ -149,7 +140,7 @@ File("output/u_sol.pvd") << u_sol
 File("output/u_m.pvd") << u_m
 
 plot(mu_opt, interactive=True, title="mu_opt")
-plot(u, interactive=True, title="u")
-#plot(u+g, interactive=True, title="u+g")
+#plot(u, interactive=True, title="u")
+plot(u+g, interactive=True, title="u+g")
 plot(u_m, interactive=True, title="u_m")
 
