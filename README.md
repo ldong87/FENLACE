@@ -5,3 +5,5 @@ The name is short for FEniCS based NLACE. FEniCS is a collection of free softwar
 NLACE is written in FORTRAN and parallelized in openMP. In order to make use of the parallelism of MPI in FEniCS, we are trying to "re-write" NLACE in FEniCS with Python. The dolfin-adjoint package (http://www.dolfin-adjoint.org/) in FEniCS could further simplify our implementation and speed up running time.
 
 This README only serves as a rough descritption and by no means complete. I am working on this out of my personal interest and any comments and/or collaborations from all NLACE developers are very welcome.
+
+Required packages: Basically all essential packages in FEniCS plus dolfin-adjoint. Details of installing them can be easily found on their websites, though building them without root access can be a pain.
