@@ -3,9 +3,6 @@ from dolfin_adjoint import *
 #import pyipopt
 import numpy as np
 
-parameters["reorder_dofs_serial"] = False
-
-
 mesh = Mesh("xmlmesh.xml")
 
 V = VectorFunctionSpace(mesh, "CG", 1) # displacement
@@ -15,9 +12,10 @@ u = Function(V, name="State")
 mu= interpolate(Constant(1), M, name="Control")
 lam = Constant(2.0)
 
-g_np = np.loadtxt("measuredDisp_1col.txt")
 g = Function(V)
-g.vector().set_local( g_np )
+fid = HDF5File(mpi_comm_world(),"g.h5","r")
+fid.read(g,"g")
+fid.close()
 
 '''
 # impose boundary conditions point by point
