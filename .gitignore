@@ -1,0 +1,6 @@
+# output
+/output
+*.dat
+
+# files in the middle
+*.h5
