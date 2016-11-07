@@ -18,7 +18,7 @@ fid.read(g,"g")
 fid.close()
 
 '''
-# impose boundary conditions point by point
+# impose boundary conditions point by point, this way could be very slow!!!
 F = inner(mu/2 * (grad(v)+grad(v).T), grad(u)+grad(u).T)*dx + lam*inner(div(v),div(u))*dx 
 class PinPoint(SubDomain):
     def __init__(self,p):
