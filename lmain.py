@@ -3,7 +3,10 @@ from dolfin_adjoint import *
 #import pyipopt
 import numpy as np
 
-mesh = Mesh("xmlmesh.xml")
+mesh = Mesh()
+fid = HDF5File(mpi_comm_world(),"mesh.h5","r")
+fid.read(mesh,"mesh",False)
+fid.close()
 
 V = VectorFunctionSpace(mesh, "CG", 1) # displacement
 M = FunctionSpace(mesh, "CG", 1)       # mu, control space
@@ -11,6 +14,9 @@ v = TestFunction(V)
 u = Function(V, name="State")
 mu= interpolate(Constant(1), M, name="Control")
 lam = Constant(2.0)
+T = as_matrix( ((1, 0), (0, 1)) )
+alpha = Constant(1e-5)
+beta = Constant(1e-2)
 
 g = Function(V)
 fid = HDF5File(mpi_comm_world(),"g.h5","r")
@@ -89,8 +95,6 @@ u_m.vector().set_local( np.append(u_m_np[:,0], u_m_np[:,1]) )
 '''
 u_m = g
 
-#T = as_matrix( ((0, 0), (0, 1)) )
-alpha = Constant(1e-5)
 
 output = File("output/output_iterations_final.pvd")
 mu_viz = Function(M, name="ControlVisualization")
@@ -98,8 +102,10 @@ def eval_cb(j, mu):
     mu_viz.assign(mu)
     output << mu_viz
 
-#J = Functional((0.5*inner((u-u_m),u-u_m))*dx + 0.5*alpha*inner(grad(mu),grad(mu))*dx)
-J = Functional((0.5*inner((u+g-u_m),u+g-u_m))*dx + 0.5*alpha*inner(grad(mu),grad(mu))*dx)
+# with H1 regularization
+J = Functional((0.5*inner(T*(u+g-u_m),u+g-u_m))*dx + 0.5*alpha*inner(grad(mu),grad(mu))*dx)
+# with TV regularization
+#J = Functional((0.5*inner(T*(u+g-u_m),u+g-u_m))*dx + alpha*sqrt(beta*beta+inner(grad(mu),grad(mu)))*dx)
 mu_c = Control(mu)
 J_rf = ReducedFunctional(J, mu_c, eval_cb_post=eval_cb)
 
