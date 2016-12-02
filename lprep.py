@@ -18,5 +18,8 @@ fid = HDF5File(mpi_comm_world(), "g.h5","w")
 fid.write(g,"g")
 fid.close()
 
+fid = HDF5File(mpi_comm_world(), "mesh.h5","w")
+fid.write(mesh, "mesh")
+fid.close()
 
 
