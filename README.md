@@ -11,7 +11,7 @@ Required packages: Basically all essential packages in FEniCS plus dolfin-adjoin
 
 Brief code structure(for now):
 
-lprep.py prepares the measured disp data in .h5 format for parallel reading. This is a work-around to get away from confusing dofmap in parallel environment. The solution comes from https://fenicsproject.org/qa/11448/assign-values-to-function-in-parallel.
+lprep.py prepares the measured disp data and mesh data in .h5 format for parallel reading. This is a work-around to get away from confusing dofmap in parallel environment. The solution comes from https://fenicsproject.org/qa/11448/assign-values-to-function-in-parallel.
 
 lmain.py include the core code for inversion.
 
