@@ -3,12 +3,14 @@ from dolfin_adjoint import *
 #import pyipopt
 import numpy as np
 
+fid = HDF5File(mpi_comm_world(),"mesh_measDisp.h5","r")
 mesh = Mesh()
-fid = HDF5File(mpi_comm_world(),"mesh.h5","r")
 fid.read(mesh,"mesh",False)
+V = VectorFunctionSpace(mesh, "CG", 1)  # displacement, state space
+uMeas = Function(V)
+fid.read(uMeas,"uMeas")
 fid.close()
 
-V = VectorFunctionSpace(mesh, "CG", 1) # displacement
 M = FunctionSpace(mesh, "CG", 1)       # mu, control space
 v = TestFunction(V)
 u = Function(V, name="State")
@@ -17,11 +19,6 @@ lam = Constant(2.0)
 T = as_matrix( ((1, 0), (0, 1)) )
 alpha = Constant(1e-5)
 beta = Constant(1e-2)
-
-g = Function(V)
-fid = HDF5File(mpi_comm_world(),"g.h5","r")
-fid.read(g,"g")
-fid.close()
 
 '''
 # impose boundary conditions point by point, this way could be very slow!!!
@@ -61,11 +58,11 @@ def forward(mu):
 
   v = TestFunction(V)
   u = Function(V, name="State")
-  F = inner(mu/2 * (grad(v)+grad(v).T), grad(u+g)+grad(u+g).T)*dx + lam*inner(div(v),div(u+g))*dx 
+  F = inner(mu/2 * (grad(v)+grad(v).T), grad(u)+grad(u).T)*dx + lam*inner(div(v),div(u))*dx 
   bc = []
-  bc_0 = DirichletBC(V.sub(0), Constant(0.0), "on_boundary")
+  bc_0 = DirichletBC(V.sub(0), Expression("u",u=uMeas.sub(0)), "on_boundary")
   bc.append(bc_0)
-  bc_1 = DirichletBC(V.sub(1), Constant(0.0), "on_boundary")
+  bc_1 = DirichletBC(V.sub(1), Expression("u",u=uMeas.sub(1)), "on_boundary")
   bc.append(bc_1)
   solve(F == 0, u,  bc)
   return u
@@ -73,27 +70,22 @@ u = forward(mu)
 
 
 
-#File("output/g.pvd") << g
 
 #u_1 = project(u, V)
 #File("output/u_1.pvd") << u_1
 
-#u_sol_1 = project(u+g, V)
-#File("output/u_sol_1.pvd") << u_sol_1
-
 # create measured disp
 '''
 x = SpatialCoordinate(mesh)
-#u_m_t = np.zeros((mesh.num_vertices(),2))
-u_m_np = mesh.coordinates()
-#np.savetxt("u_m_t",u_m_t)
+#uMeas_t = np.zeros((mesh.num_vertices(),2))
+uMeas_np = mesh.coordinates()
+#np.savetxt("uMeas_t",uMeas_t)
 '''
 '''
-u_m_np = np.loadtxt("measuredDisp.txt")
-u_m = Function(V)
-u_m.vector().set_local( np.append(u_m_np[:,0], u_m_np[:,1]) )
+uMeas_np = np.loadtxt("measuredDisp.txt")
+uMeas = Function(V)
+uMeas.vector().set_local( np.append(uMeas_np[:,0], uMeas_np[:,1]) )
 '''
-u_m = g
 
 
 output = File("output/output_iterations_final.pvd")
@@ -103,9 +95,9 @@ def eval_cb(j, mu):
     output << mu_viz
 
 # with H1 regularization
-J = Functional((0.5*inner(T*(u+g-u_m),u+g-u_m))*dx + 0.5*alpha*inner(grad(mu),grad(mu))*dx)
+J = Functional((0.5*inner(T*(u-uMeas),u-uMeas))*dx + 0.5*alpha*inner(grad(mu),grad(mu))*dx)
 # with TV regularization
-#J = Functional((0.5*inner(T*(u+g-u_m),u+g-u_m))*dx + alpha*sqrt(beta*beta+inner(grad(mu),grad(mu)))*dx)
+#J = Functional((0.5*inner(T*(u-uMeas),u-uMeas))*dx + alpha*sqrt(beta*beta+dot(grad(mu),grad(mu)))*dx)
 mu_c = Control(mu)
 J_rf = ReducedFunctional(J, mu_c, eval_cb_post=eval_cb)
 
@@ -139,12 +131,11 @@ solver = IPOPTSolver(problem, parameters=parameters)
 mu_opt = solver.solve()
 '''
 
-u_sol = project(u+g, V)
+u_sol = project(u, V)
 File("output/u_sol.pvd") << u_sol
-File("output/u_m.pvd") << u_m
+File("output/uMeas.pvd") << uMeas
 
 plot(mu_opt, interactive=True, title="mu_opt")
 #plot(u, interactive=True, title="u")
-plot(u+g, interactive=True, title="u+g")
-plot(u_m, interactive=True, title="u_m")
+plot(uMeas, interactive=True, title="uMeas")
 
