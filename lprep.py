@@ -3,7 +3,7 @@ import numpy as np
 
 mesh = Mesh("xmlmesh.xml")
 
-V = VectorFunctionSpace(mesh, "CG", 1) # displacement, state space
+V = VectorFunctionSpace(mesh, "CG", 1) # displacement
 uMeas = Function(V)
 
 # write g in serial
