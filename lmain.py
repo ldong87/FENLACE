@@ -59,11 +59,14 @@ def forward(mu):
   v = TestFunction(V)
   u = Function(V, name="State")
   F = inner(mu/2 * (grad(v)+grad(v).T), grad(u)+grad(u).T)*dx + lam*inner(div(v),div(u))*dx 
-  bc = []
-  bc_0 = DirichletBC(V.sub(0), Expression("u",u=uMeas.sub(0)), "on_boundary")
-  bc.append(bc_0)
-  bc_1 = DirichletBC(V.sub(1), Expression("u",u=uMeas.sub(1)), "on_boundary")
-  bc.append(bc_1)
+  
+#  bc = []
+#  bc_0 = DirichletBC(V.sub(0), Expression("u",u=uMeas.sub(0)), "on_boundary")
+#  bc.append(bc_0)
+#  bc_1 = DirichletBC(V.sub(1), Expression("u",u=uMeas.sub(1)), "on_boundary")
+#  bc.append(bc_1)
+
+  bc = DirichletBC(V, Expression(("u0","u1"),u0=uMeas.sub(0),u1=uMeas.sub(1)),"on_boundary")
   solve(F == 0, u,  bc)
   return u
 u = forward(mu)
